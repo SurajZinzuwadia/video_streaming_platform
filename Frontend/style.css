@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: rgb(2, 2, 46);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+
+.menu-container {
+  flex: 6;
+  margin-top: 10px;
+  margin-left: 50px; /* Adjusted the margin for smaller screens */
+}
+
+
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  margin-right: 20px; /* Adjusted the margin for smaller screens */
+  font-size: 1em;
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 600px) {
+  /* Adjustments for screens up to 600px */
+  .menu-container {
+    margin-left: 20px;
+  }
+
+  .menu-item {
+    margin-right: 10px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  /* Adjustments for screens up to 400px */
+  .menu-container {
+    margin-left: 10px;
+  }
+
+  .menu-item {
+    margin-right: 5px;
+    font-size: 10px;
+
+  }
+}
+
+.toggle{
+    width: 44px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+.toggle-container {
+  flex: 2;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.fa-moon, fa-sun{
+    color: rgb(41, 151, 41);
+}
+
+.toggle-ball{
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    position: absolute;
+    right: 2px;
+    border-radius: 50%;
+}
+
+.container{
+    background-color: white;
+    height: auto
+    color: white;
+    width: auto;
+}
+
+.content{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+.liveStreamVideo {
+  width: 100%;
+  height: auto;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: table;
+  position: relative;
+  min-height: 30rem;
+  background: url('./img.jpeg'), linear-gradient(90deg, rgb(147, 147, 218), rgb(2, 2, 46));
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  box-shadow: inset 120px 100 px 250px #1a1919, inset -120px -100px -250px #1a1919
+}
+
+.liveStreamVideo h1{
+    text-transform: uppercase;
+
+}
+
+
+     .video-list {
+        display: flex;
+        overflow-x: auto;
+       margin-top: 10px;
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+
+      .video-list video {
+        margin-right: 10px;
+        height: 30%;
+        width: 30%;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      .active {
+        background-color: blueviolet;
+      }
+
+      .space{
+        height: 10px;
+      }
+      .top{
+        margin-left: 20px;
+        font-family: "Poppins";
+      }
