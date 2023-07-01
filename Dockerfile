@@ -1,30 +1,3 @@
-# FROM nginx:latest
-
-# # Copy the nginx.conf file
-# COPY nginx.conf /etc/nginx/nginx.conf
-
-# # Create a custom user and group
-# #RUN groupadd -r your_groupname && useradd -r -g your_groupname your_username
-
-# # Set the user and group for NGINX to use
-# #USER your_username
-
-# # Copy the backend code
-# COPY Backend /usr/share/nginx/html/Backend
-
-# # Copy the frontend code
-# COPY Frontend /usr/share/nginx/html/Frontend
-
-# # Copy the SSL certificates
-# COPY SSL_Certificates/liveStream_SSL /etc/nginx/ssl
-
-# # Expose the necessary ports
-# EXPOSE 80 443
-
-# # Start NGINX when the container starts
-# CMD ["nginx", "-g", "daemon off;"]
-
-
 FROM nginx:latest
 
 # Copy the nginx.conf file
