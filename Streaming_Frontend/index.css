@@ -1,0 +1,22 @@
+#videoElement {
+    width: 80%;
+    height: 80%;
+    border: 1px solid #ccc;
+    transform: scaleX(-1);
+  }
+  
+  #flipButton {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: hsl(122, 39%, 49%);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  #flipButton:hover {
+    background-color: #45a049;
+  }
+  
