@@ -1,19 +1,16 @@
 #videoContainer {
+  width: 500px;
+  height: 500px;
   position: relative;
   overflow: hidden;
   background-color: #000;
+  transform: scaleX(-1);
 }
 
 #videoCanvas {
   width: 100%;
   height: 100%;
-  transform: scaleX(-1);
 }
-
-/* .flipped #videoCanvas {
-  transform: scaleX(-1);
-} */
-
 
 #flipButton {
   display: flex;
