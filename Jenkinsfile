@@ -33,7 +33,7 @@ pipeline{
         stage('Run Image') {
 
 			steps {
-				sh 'docker run -d -p 80:8080 -p 443:8081 --name video-streaming-container krishnap1999/video-streaming-platform:latest'
+				sh 'docker run --rm -d -p 80:8080 -p 443:8081 --name video-streaming-container krishnap1999/video-streaming-platform:latest'
 			}
 		}
 	}
