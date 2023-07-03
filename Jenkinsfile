@@ -30,10 +30,16 @@ pipeline{
 				sh 'docker push krishnap1999/video-streaming-platform:latest'
 			}
 		}
+		stage('Stop and Remove old Container') {
+            steps {
+                sh 'docker stop video-streaming-container || true'
+                sh 'docker rm video-streaming-container || true'
+            }
+        }
         stage('Run Image') {
 
 			steps {
-				sh 'docker run --rm -d -p 80:8080 -p 443:8081 --name video-streaming-container krishnap1999/video-streaming-platform:latest'
+				sh 'docker run -d -p 80:8080 -p 443:8081 --name video-streaming-container krishnap1999/video-streaming-platform:latest'
 			}
 		}
 	}
