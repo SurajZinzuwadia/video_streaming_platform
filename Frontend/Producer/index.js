@@ -32,7 +32,8 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
           canvasContext.save();
 
           if (isFrontCamera) {
-            // canvasContext.scale(-0.5, 0.5);
+            canvasContext.translate(videoCanvas.width, 0);
+            canvasContext.scale(-1, 1);
           }
 
           // Draw the video frame onto the canvas
@@ -40,9 +41,10 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
             videoElement,
             0,
             0,
-            -videoCanvas.width,
+            videoCanvas.width,
             videoCanvas.height
           );
+          canvasContext.restore();
           requestAnimationFrame(drawVideoFrame);
         };
         drawVideoFrame();
@@ -52,7 +54,6 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
       flipButton.addEventListener("click", function () {
         // Toggle the facing mode
         isFrontCamera = !isFrontCamera;
-        //updateCameraFacingMode(); // Update the CSS transform based on the new facing mode
 
         // Stop the current stream
         videoElement.srcObject.getTracks().forEach(function (track) {
