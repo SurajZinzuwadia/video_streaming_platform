@@ -22,7 +22,7 @@ COPY Backend /usr/share/nginx/html/Backend
 COPY Frontend /usr/share/nginx/html/Frontend
 
 # Expose the necessary ports
-EXPOSE 80
+EXPOSE 8081
 
 # Start NGINX when the container starts
 CMD ["nginx", "-g", "daemon off;"]

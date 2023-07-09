@@ -39,7 +39,7 @@ pipeline{
         stage('Run Image') {
 
 			steps {
-				sh 'docker run -d -p 80:80 --name video-streaming-container krishnap1999/video-streaming-platform:latest'
+				sh 'docker run -d -p 8081:8081 --name video-streaming-container krishnap1999/video-streaming-platform:latest'
 			}
 		}
 	}
