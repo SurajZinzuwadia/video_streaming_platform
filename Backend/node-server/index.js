@@ -1,11 +1,6 @@
-const express = require("express");
 const https = require("https");
 const WebSocket = require("ws");
 const fs = require("fs");
-const cors = require("cors");
-
-const app = express();
-app.use(cors()); // Enable CORS middleware
 
 const server = https.createServer(
   {
@@ -13,8 +8,9 @@ const server = https.createServer(
     key: fs.readFileSync("../../SSL_Certificates/liveStream_SSL/private.key"), // Replace with your private key path
     passphrase: "dexter",
   },
-  app
+  () => {}
 );
+
 const wss = new WebSocket.Server({ server });
 
 // Store active connections
@@ -32,24 +28,35 @@ wss.on("connection", (ws) => {
 });
 
 // Route to receive camera feed from the producer
-app.post("/feed", (req, res) => {
-  // Handle the camera feed data sent by the producer
-  // and broadcast it to all connected consumers
+server.on("request", (req, res) => {
+  if (req.method === "POST" && req.url === "/feed") {
+    let body = "";
 
-  // Assuming the producer sends data as JSON
-  req.on("data", (data) => {
-    const feedData = JSON.parse(data);
-
-    // Broadcast the feed data to all connected consumers
-    connections.forEach((ws) => {
-      if (ws.readyState === WebSocket.OPEN) {
-        ws.send(JSON.stringify(feedData));
-      }
+    req.on("data", (data) => {
+      // Accumulate the data chunks
+      body += data;
     });
-  });
 
-  // Send a response to the producer
-  res.sendStatus(200);
+    req.on("end", () => {
+      // Handle the camera feed data sent by the producer
+      // and broadcast it to all connected consumers
+
+      // Assuming the producer sends base64-encoded video data
+      connections.forEach((ws) => {
+        if (ws.readyState === WebSocket.OPEN) {
+          ws.send(body);
+        }
+      });
+
+      // Send a response to the producer
+      res.statusCode = 200;
+      res.end();
+    });
+  } else {
+    // Handle other routes or return 404 Not Found
+    res.statusCode = 404;
+    res.end();
+  }
 });
 
 // Start the server
