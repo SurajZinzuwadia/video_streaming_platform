@@ -16,7 +16,7 @@ function connectToServer() {
 
 
 // Connect to the server using WebSocket
-const socket = new WebSocket('wss://172.20.10.10:3000'); // Replace <server-ip> with the server IP or domain
+const socket = new WebSocket('wss://localhost:3000'); // Replace <server-ip> with the server IP or domain
 
 // Event handler for when the WebSocket connection is established
 socket.onopen = () => {
