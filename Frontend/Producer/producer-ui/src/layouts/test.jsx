@@ -50,7 +50,7 @@ function VideoCard() {
   );
 }
 
-export default VideoCard;
+// export default VideoCard;
 
 
 // image based
