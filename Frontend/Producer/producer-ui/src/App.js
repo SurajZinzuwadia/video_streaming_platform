@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import BrowsePage from "./components/BrowsePage";
 import VideoCardGrid from "./layouts/VideoCardGrid";
