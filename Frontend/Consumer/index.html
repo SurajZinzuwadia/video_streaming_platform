@@ -2,79 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <title>Video Streaming</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <title>Document</title>
   </head>
   <body>
-    <div class="navbar">
-      <div class="navbar-container">
-        <div class="menu-container">
-          <div class="menu">
-            <div class="menu-item">Upcoming Videos</div>
-            <div class="menu-item">Top Videos</div>
-            <div class="menu-item">Latest Video</div>
-            <div class="menu-item">English Video</div>
-            <div class="menu-item">Hindi Video</div>
-          </div>
-        </div>
-        <div class="toggle-container">
-          <div class="toggle">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="toggle-ball"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="content">
-        <div class="liveStreamVideo">
-          <button>Live Soon</button>
-        </div>
-      </div>
-    </div>
+    <video id="videoElement" autoplay></video>
+    <canvas id="myCanvas" ></canvas>
+    <button id="connectButton">Connect</button>
 
-    <div class="space">
-
-    </div>
-     <h3 class="top">Top Videos ></h3>
-
-          <div class="video-list">
-        <video loop muted controls autoplay poster="">
-          <source
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <video loop muted controls autoplay poster="">
-          <source
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <video loop muted controls autoplay poster="">
-          <source
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            type="video/mp4"
-          />
-        </video>
-        <video loop muted controls autoplay poster="">
-          <source
-            src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-            type="video/mp4"
-          />
-        </video>
-      </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
   </body>
 </html>
