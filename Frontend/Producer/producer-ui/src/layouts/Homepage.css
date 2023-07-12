@@ -1,0 +1,154 @@
+/* Homepage.css */
+.homepage {
+  font-family: Arial, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+/* Key Features Section */
+.key-features {
+  background-color: #111;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.key-features h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-card {
+  flex-basis: 300px;
+  padding: 20px;
+}
+
+.feature-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+
+.feature-card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #000;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  flex-basis: 400px;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 0 20px;
+}
+
+.testimonial-card p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.testimonial-card .author {
+  font-weight: bold;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background-color: #111;
+  color: #fff;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff8300;
+  border-radius: 4px;
+}
+
+.cta-button:hover {
+  background-color: #ff6d00;
+}
+
+
+/* Full-screen image */
+.video-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }

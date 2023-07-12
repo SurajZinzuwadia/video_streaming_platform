@@ -1,0 +1,36 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #000000; /* Update the background color to black */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-logo a {
+  font-weight: bold;
+  font-size: 24px;
+  color: #ffffff; /* Update the text color to white */
+  text-decoration: none;
+}
+
+.navbar-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.navbar-links li a {
+  color: #ffffff; /* Update the text color to white */
+  text-decoration: none;
+}
+
+.navbar-links li a:hover {
+  color: #0066ff;
+}
+
+.navbar-signup {
+  color: #000000; /* Update the text color to black */
+  background-color: #0066ff;
+  padding: 10px 20px;
+  border-radius: 4px;
+}
