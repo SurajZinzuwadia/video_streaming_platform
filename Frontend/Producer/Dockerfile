@@ -93,10 +93,10 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 
 # Copy the static assets of the vanilla JavaScript application
-COPY ./Frontend/Producer/index.html /usr/share/nginx/html
-COPY ./Frontend/Producer/index.js /usr/share/nginx/html
+COPY Frontend/Producer/index.html /usr/share/nginx/html
+COPY Frontend/Producer/index.js /usr/share/nginx/html
 
-# Expose port 8081
+# Expose port 80
 EXPOSE 8081
 
 # Start NGINX
