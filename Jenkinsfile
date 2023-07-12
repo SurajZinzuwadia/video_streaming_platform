@@ -10,12 +10,27 @@ pipeline{
 	stages {
 
 		stage('Build') {
-  steps {
-    sh 'docker-compose build --build-arg IMAGE_TAG=latest'
-    sh 'docker tag krishnap1999/video-streaming-platform:latest krishnap1999/video-streaming-platform:latest'
-  }
-}
+            steps {
+                sh 'docker-compose build'
+            }
+        }
 
+        stage('Tag and Push') {
+            steps {
+                sh 'docker tag krishnap1999/video-streaming-platform/frontend:latest krishnap1999/video-streaming-platform/frontend:1.0'
+                sh 'docker tag krishnap1999/video-streaming-platform/backend:latest krishnap1999/video-streaming-platform/backend:1.0'
+                sh 'docker tag krishnap1999/video-streaming-platform/nginx:latest krishnap1999/video-streaming-platform/nginx:1.0'
+                sh 'docker push krishnap1999/video-streaming-platform/frontend:1.0'
+                sh 'docker push krishnap1999/video-streaming-platform/backend:1.0'
+                sh 'docker push krishnap1999/video-streaming-platform/nginx:latest:1.0'
+            }
+        }
+
+        stage('Deploy') {
+            steps {
+                sh 'docker-compose up -d'
+            }
+        }
 
 		stage('Login') {
             steps {
