@@ -109,7 +109,7 @@
     // Function to send image data to the server
     function sendDataToServer(imageData) {
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "https://192.168.2.93:3000/feed"); // Replace <server-ip> with the server IP or domain
+      xhr.open("POST", "https://192.168.2.111:3000/feed"); // Replace <server-ip> with the server IP or domain
       xhr.setRequestHeader("Content-Type", "application/json");
 
       const data = {

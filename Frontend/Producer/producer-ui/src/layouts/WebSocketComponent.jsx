@@ -6,7 +6,7 @@ function WebSocketComponent() {
 
   const connectToServer = () => {
     // Connect to the server using WebSocket
-    socketRef.current = new WebSocket('wss://192.168.2.93:3000'); // Replace <server-ip> with the server IP or domain
+    socketRef.current = new WebSocket('wss://192.168.2.111:3000'); // Replace <server-ip> with the server IP or domain
 
     // Event handler for when the WebSocket connection is established
     socketRef.current.onopen = () => {

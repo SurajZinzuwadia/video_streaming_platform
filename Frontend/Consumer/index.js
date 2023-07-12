@@ -13,7 +13,7 @@ let socket;
 // Function to connect to the server and start receiving camera feed
 function connectToServer() {
   // Connect to the server using WebSocket
-  const socket = new WebSocket("wss://192.168.2.93:3000"); // Replace <server-ip> with the server IP or domain
+  const socket = new WebSocket("wss://192.168.2.111:3000"); // Replace <server-ip> with the server IP or domain
 
   // Event handler for when the WebSocket connection is established
   socket.onopen = () => {
