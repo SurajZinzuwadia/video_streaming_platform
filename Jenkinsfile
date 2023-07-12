@@ -10,11 +10,12 @@ pipeline{
 	stages {
 
 		stage('Build') {
+  steps {
+    sh 'docker-compose build --build-arg IMAGE_TAG=latest'
+    sh 'docker tag krishnap1999/video-streaming-platform:latest krishnap1999/video-streaming-platform:latest'
+  }
+}
 
-			steps {
-				sh 'docker build -t krishnap1999/video-streaming-platform:latest .'
-			}
-		}
 
 		stage('Login') {
             steps {
